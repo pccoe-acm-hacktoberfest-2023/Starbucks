@@ -29,3 +29,52 @@ To fix the responsiveness issue, follow these steps:
 
 4. **Test on Multiple Devices**:
    After implementing the changes, it's essential to conduct thorough testing of the Starbucks website on various devices and screen sizes to ensure it maintains a visually pleasing appearance across all platforms.
+
+## Getting Started
+
+1. Fork this repository (Click the Fork button in the top right of this page, click your Profile Image).
+2. Clone your forked repository to your local machine.
+
+git clone  https://pccoe-acm-hacktoberfest-2023.github.io/Starbucks/
+
+
+git checkout -b your-branch-name
+
+git add .
+git Status
+git commit -m 'Your commit message'
+git push origin your-branch-name
+
+
+#### Name: [YOUR NAME](GitHub link)
+
+- Place: City, State, Country
+- Bio: Who are you?
+- GitHub: [GitHub account name](GitHub link)
+
+
+# Your Name
+
+### Location
+
+Your City/Country
+
+### Academics
+
+Your School
+
+### Interests
+
+- Some Things You Like
+
+### Development
+
+- Inventor of the My Pillow
+
+### Projects
+
+- [My Project](GitHub Link) Short Description
+
+### Profile Link
+
+[Your Name](GitHub Link)
