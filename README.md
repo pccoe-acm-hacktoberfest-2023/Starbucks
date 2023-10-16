@@ -41,8 +41,11 @@ git clone  https://pccoe-acm-hacktoberfest-2023.github.io/Starbucks/
 git checkout -b your-branch-name
 
 git add .
+
 git Status
-git commit -m 'Your commit message'
+
+git commit -m 'Your commit message' 
+
 git push origin your-branch-name
 
 
