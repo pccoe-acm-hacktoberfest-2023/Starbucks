@@ -35,19 +35,19 @@ To fix the responsiveness issue, follow these steps:
 1. Fork this repository (Click the Fork button in the top right of this page, click your Profile Image).
 2. Clone your forked repository to your local machine.
 
-git clone  https://pccoe-acm-hacktoberfest-2023.github.io/Starbucks/
-
+```sh
+git clone https://github.com/pccoe-acm-hacktoberfest-2023/Starbucks.git
 
 git checkout -b your-branch-name
 
 git add .
 
-git Status
+git status
 
 git commit -m 'Your commit message' 
 
 git push origin your-branch-name
-
+```
 
 #### Name: [YOUR NAME](GitHub link)
 
