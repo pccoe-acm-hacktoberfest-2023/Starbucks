@@ -4,7 +4,7 @@
 
 Project Link :- https://pccoe-acm-hacktoberfest-2023.github.io/Starbucks/
 
-## Overview 👇🏻!
+## Overview 👇🏻
 
 Exploring the Starbucks website provides beginners with a hands-on way to grasp essential HTML and CSS concepts. It helps you see how HTML organizes content and how CSS enhances styling and layout. This real-world practice makes web development principles more accessible and relevant.
 
