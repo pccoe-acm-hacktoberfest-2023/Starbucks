@@ -36,7 +36,7 @@ To fix the responsiveness issue, follow these steps:
 2. Clone your forked repository to your local machine.
 
 ```sh
-git clone https://github.com/pccoe-acm-hacktoberfest-2023/Starbucks.git
+git clone https://github.com/your-github-username/Starbucks.git
 
 git checkout -b your-branch-name
 
