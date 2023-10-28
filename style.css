@@ -24,6 +24,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+}
+nav{
+  margin-left: auto;
+
+}
+.nav-hover:hover{
+  background-color: #564c4d;
 }
 header .logo {
   position: relative;
@@ -142,6 +150,14 @@ header ul li a {
   clip-path: circle(600px at right 800px);
 }
 
-.nav-hover:hover{
-   background-color: #097b59;
+.nav-links a {
+  text-decoration: none;
+  color: #0c0c0c;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; 
+}
+
+.nav-links a:hover {
+  color: #1e6d33;
+  transform: scale(1.4); 
 }
