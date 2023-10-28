@@ -141,7 +141,14 @@ header ul li a {
   background: #017143;
   clip-path: circle(600px at right 800px);
 }
+.nav-hover a {
+  text-decoration: none;
+  color: #0c0c0c;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
 
-.nav-hover li :hover{
-  color: #097b59;
+.nav-hover a:hover {
+  color: #1e6d33;
+  transform: scale(1.4);
 }
