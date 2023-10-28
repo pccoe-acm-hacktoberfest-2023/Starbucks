@@ -142,6 +142,6 @@ header ul li a {
   clip-path: circle(600px at right 800px);
 }
 
-.nav-hover:hover{
-   background-color: #097b59;
+.nav-hover li :hover{
+  color: #097b59;
 }
