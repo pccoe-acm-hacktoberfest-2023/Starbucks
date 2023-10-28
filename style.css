@@ -142,6 +142,7 @@ header ul li a {
   clip-path: circle(600px at right 800px);
 }
 
-.nav-hover:hover{
-   background-color: #097b59;
+ul.nav-hover li a:hover{
+   color: #097b59;
+   transform: translateY(-3px);
 }
