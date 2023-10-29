@@ -12,7 +12,8 @@
       <div class="circle"></div>
       <header>
         <a href="#" class="logo"> <img src="images/logo.png" /></a>
-        <ul class="nav-hover" style="list-style-type: none;">
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="nav-hover navigation" style="list-style-type: none;">
           <li><a href="Home.html" class="menu-btn">Home</a></li>
           <li><a href="menu.html" class "menu-btn">Menu</a></li>
           <li><a href="#">What's new</a></li>
@@ -72,6 +73,13 @@
       function changeCircleColor(color) {
         const circle = document.querySelector(".circle");
         circle.style.background = color;
+      }
+
+      function toggleMenu(){
+        var menuToggle = document.querySelector('.toggle');
+        var navigation = document.querySelector('.navigation')
+        menuToggle.classList.toggle('active')
+        navigation.classList.toggle('active')
       }
     </script>
   </body>
