@@ -152,3 +152,62 @@ header ul li a {
   color: #1e6d33;
   transform: scale(1.4);
 }
+
+
+/* Media Query */
+
+@media (max-width: 991px){
+  header{
+    padding: 20px;
+  }   
+  header .logo{
+    max-width: 60px;
+  }
+  header ul{
+    position: relative;
+    display: none;
+  }
+  .toggle{
+    position: relative;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    background: url(./images/menu.png);
+    background-size: 43px;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: invert(1);
+    z-index: 11;
+  }
+  .toggle.active{
+    position: fixed;
+    right: 20px;
+    background: url(./images/close.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: invert(1);
+  }
+  header ul.navigation.active{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    z-index: 10;
+  }
+  header ul li a{
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: 5px 0;
+    text-decoration: none;
+  }
+  section{
+    padding: 20px;
+  }
+}
