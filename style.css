@@ -1,10 +1,156 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+#menuToggle
+ {
+   display: none;
+   position: absolute;
+   right: 15%;
+   top: 7%;
+   z-index: 1;
+   width: min-content;
+   -webkit-user-select: none;
+   user-select: none;
+ }
+ 
+ #menuToggle a
+ {
+   text-decoration: none;
+   color: #232323;
+   
+   transition: color 0.3s ease;
+ }
+ 
+ #menuToggle a:hover
+ {
+   color: tomato;
+ }
+ 
+ 
+ #menuToggle input
+ {
+   display: block;
+   width: 40px;
+   height: 32px;
+   position: absolute;
+   top: -7px;
+   left: -5px;
+   
+   cursor: pointer;
+   
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+   
+   -webkit-touch-callout: none;
+ }
+ 
+ /*
+  * Just a quick hamburger
+  */
+ #menuToggle span
+ {
+   display: block;
+   width: 33px;
+   height: 4px;
+   margin-bottom: 5px;
+   position: relative;
+   
+   background: #cdcdcd;
+   border-radius: 3px;
+   
+   z-index: 1;
+   
+   transform-origin: 4px 0px;
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity 0.55s ease;
+ }
+ 
+ #menuToggle span:first-child
+ {
+   transform-origin: 0% 0%;
+ }
+ 
+ #menuToggle span:nth-last-child(2)
+ {
+   transform-origin: 0% 100%;
+ }
+ 
+ /* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+ #menuToggle input:checked ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #232323;
+ }
+ 
+ /*
+  * But let's hide the middle one.
+  */
+ #menuToggle input:checked ~ span:nth-last-child(3)
+ {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+ 
+ /*
+  * Ohyeah and the last one should go the other direction
+  */
+ #menuToggle input:checked ~ span:nth-last-child(2)
+ {
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+ 
+ /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+ #menu
+ {
+   position: absolute;
+   width: max-content;
+   right: 80px;
+   margin: -100px 0 0 -100px;
+   /* padding: 50px; */
+   padding-top:50%;
+
+   background: #017143;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   
+   transform-origin: 0% 0%;
+   transform: translate(0, -100%);
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #menu li
+ {
+  text-align: right;
+  color: white;
+   padding: 5px;
+   font-size: 0.9rem;
+ }
+ 
+ /*
+  * And let's slide it in from the left
+  */
+ #menuToggle input:checked ~ ul
+ {
+   transform: none;
+ }
+
 section {
   position: absolute;
   width: 100%;
@@ -15,6 +161,7 @@ section {
   align-items: center;
   background: #fff;
 }
+
 header {
   position: absolute;
   top: 0;
@@ -25,14 +172,17 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
 header .logo {
   position: relative;
   max-width: 80px;
 }
+
 header ul {
   position: relative;
   display: flex;
 }
+
 header ul li a {
   display: inline-block;
   color: #333;
@@ -41,6 +191,7 @@ header ul li a {
   text-decoration: none;
   margin-right: 50px;
 }
+
 .content {
   position: relative;
   width: 100%;
@@ -48,27 +199,33 @@ header ul li a {
   justify-content: space-between;
   align-items: center;
 }
+
 .content .textBox {
   position: relative;
   max-width: 600px;
 }
+
 .content .textBox h2 {
   color: #333;
   font-size: 4em;
   line-height: 1.4em;
   font-weight: 500;
 }
+
 .content .textBox h2 span {
   color: #097b59;
   font-size: 1.2em;
   font-weight: 900;
 }
+
 .content .textBox p {
   color: #333;
 }
+
 .content .textBox a:hover {
   transform: translateX(19%);
 }
+
 .content .textBox a {
   display: inline-block;
   margin-top: 20px;
@@ -80,6 +237,7 @@ header ul li a {
   letter-spacing: 1px;
   text-decoration: none;
 }
+
 .content .imgBox {
   width: 600px;
   display: flex;
@@ -87,9 +245,11 @@ header ul li a {
   padding-right: 50px;
   margin-top: 50px;
 }
+
 .content .imgBox img {
   max-width: 340px;
 }
+
 .thumb {
   position: absolute;
   left: 50%;
@@ -97,6 +257,7 @@ header ul li a {
   transform: translateX(-50%);
   display: flex;
 }
+
 .thumb li {
   list-style: none;
   display: inline-block;
@@ -104,12 +265,15 @@ header ul li a {
   cursor: pointer;
   transition: 0.5s;
 }
+
 .thumb li:hover {
   transform: translateY(-15px);
 }
+
 .thumb li img {
   max-width: 60px;
 }
+
 .sci {
   position: absolute;
   top: 50%;
@@ -120,18 +284,22 @@ header ul li a {
   align-items: center;
   flex-direction: column;
 }
+
 .sci li {
   list-style: none;
 }
+
 .sci li a {
   display: inline-block;
   margin: 5px 0;
   transform: scale(0.6);
   filter: invert(1);
 }
+
 .sci li a:hover {
   transform: translateY(-10px);
 }
+
 .circle {
   position: absolute;
   top: 0;
@@ -141,6 +309,7 @@ header ul li a {
   background: #017143;
   clip-path: circle(600px at right 800px);
 }
+
 .nav-hover a {
   text-decoration: none;
   color: #0c0c0c;
@@ -152,3 +321,53 @@ header ul li a {
   color: #1e6d33;
   transform: scale(1.4);
 }
+
+.logo-black-white {
+  display: none;
+}
+
+@media (max-width: 700px) {
+
+  body *{
+    background-color: #017143;
+    margin: 0;
+  }
+  #menuToggle{
+    display: block;
+  }
+
+
+  .starbucks {
+    display: none;
+  }
+  .imgBox{
+    display: none;
+  }
+  .circle {
+    display: none;
+  }
+  .sci {
+    display: flex;
+    color: black
+  }
+  header ul {
+    display: none;
+  }
+.textBox{
+text-align: left;
+justify-content: center;
+width: 100%;
+}
+.sci{
+  display: none;
+}
+.content{
+  width: 100%
+}
+.content .textBox h2 span{
+  width: 100%;
+  font-size: 3.4rem;
+  color: white;
+}
+
+} 
