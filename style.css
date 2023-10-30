@@ -335,8 +335,6 @@ header ul li a {
   #menuToggle{
     display: block;
   }
-
-
   .starbucks {
     display: none;
   }
@@ -346,20 +344,13 @@ header ul li a {
   .circle {
     display: none;
   }
-  .sci {
-    display: flex;
-    color: black
-  }
   header ul {
     display: none;
   }
-.textBox{
-text-align: left;
-justify-content: center;
-width: 100%;
-}
-.sci{
-  display: none;
+  .textBox{
+    text-align: left;
+    justify-content: center;
+    width: 100%;
 }
 .content{
   width: 100%
@@ -368,6 +359,12 @@ width: 100%;
   width: 100%;
   font-size: 3.4rem;
   color: white;
+}
+.sci{
+  top:30%;
+}
+.sci li a {
+  filter: invert(0);
 }
 
 } 
